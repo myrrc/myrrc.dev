@@ -1,0 +1,34 @@
+{%- if page.date -%}
+    {%- assign date = page.date -%}
+    {%- assign modified_date = page.modified_date -%}
+    {%- assign tags = page.tags -%}
+{%- else -%}
+    {%- assign date = post.date -%}
+    {%- assign modified_date = post.modified_date -%}
+    {%- assign tags = post.tags -%}
+{%- endif -%}
+
+<span class="post-meta">
+<time class="dt-published" datetime="{{ date | date_to_xmlschema }}" itemprop="datePublished">
+    {{ date | date: site.date_format }}
+</time>
+
+{%- if modified_date -%}
+~ 
+<time class="dt-modified" datetime="{{ modified_date | date_to_xmlschema }}" itemprop="dateModified">
+    {{ modified_date | date: site.date_format }}
+</time>
+{%- endif -%}
+
+{%- if tags.size > 0 -%}
+<span class="post-tags">
+Tags:&nbsp;
+{% for tag in tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}">
+        <nobr>{{ tag_name }}</nobr>&nbsp;
+    </a>
+{% endfor %}
+{%- endif -%}
+</span>
+</span>
