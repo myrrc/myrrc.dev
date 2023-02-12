@@ -2,3 +2,7 @@
 Session.vim
 Gemfile.lock
 _site
+
+cv/*
+!cv/resume.tex
+!cv/*.sty
