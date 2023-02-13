@@ -1,0 +1,125 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[bottom=0pt, top=30pt, left=40pt, right=40pt]{geometry}
+
+\pagestyle{empty}
+\raggedright
+
+\newcommand{\lineunder} { \vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\ }
+\newcommand{\header} [1] { {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder }
+
+\newcommand{\CC}{C\texttt{++}}
+\newcommand{\CS}{C\texttt{\#}}
+
+\setlist[itemize]{leftmargin=1em, topsep=1pt, itemsep=1pt, parsep=1pt}
+
+\begin{document}
+
+\begin{center}
+	{\Huge \scshape {Mike Kot}} \\
+    \href{mailto:to-job@myrrc.dev}{to-job@myrrc.dev} $\cdot$
+    \url{https://myrrc.dev} \\
+\end{center}
+
+\header{Summary}
+
+An experienced software engineer interested in both theoretical and practical aspects of building
+high-load distributed systems, category theory, functional languages, and asynchronous programming.
+
+\header{Experience}
+
+\textbf{Senior software developer}, DoubleCloud \hfill Nov 2022 - Present \\
+\textbf{Senior software developer}, Tinkoff \hfill May 2022 - Nov 2022 \\
+
+\begin{itemize}
+    \item Designed an in-house Gitlab CI replacement for Tinkoff ecosystem.
+        Such CI would leverage analytics collection (including DORA metrics),
+        add the ability to update pipeline steps in a centralized way (instead of per-project configuration),
+        and provide a seamless developer experience for Tinkoff employees.
+    \item Coordinated 12 people from 5 teams to develop the RFC and launch a public demo.
+    \item Contributed to CI backend microservices in Golang.
+\end{itemize}
+
+\textbf{\CC\ developer}, Altinity \hfill June 2020 - Nov 2021 \\
+
+\begin{itemize}
+    \item Designed and implemented a ZooKeeper metadata restoration utility for ClickHouse
+        distributed table engines. This utility minimized network overhead while restoring
+        corrupted tables which, for some companies, resulted in a significant cost saving.
+    \item Enhanced ClickHouse documentation by adding an automatically generated CMake flags
+        reference which allowed ClickHouse developers to lower compilation time by at most
+        four times.
+    \item Introduced various improvements to ClickHouse's type system including possibility to
+        multiply floating-point numbers by internal decimal format.
+    \item Optimized query processing pipelines for various functions operating on dictionary-encoded
+        types which lead to at most eleven times speedup.
+    \item Participated in the development of "lightweight DELETEs" -- a fast way of deleting
+        data from a possibly distributed table without mutations.
+\end{itemize}
+
+\textbf{\CC\ developer}, Rebus Capital \hfill May 2019 - June 2020 \\
+
+\begin{itemize}
+    \item Developed elements of a distributed system (cryptocurrency exchange),
+        including web endpoints REST/WebSockets API, streaming engines, persistent storage,
+        and the control module application coordinating other services.
+    \item Implemented a Protobuf-like code generation tool converting internal schema format
+        to JSON, C structures, and Swagger files.
+\end{itemize}
+
+\textbf{VR developer}, STEM Games \hfill Dec 2017 - Apr 2019 \\
+
+\begin{itemize}
+    \item Programmed various chemistry exploration levels for a VR chemistry
+        laboratory, including "Chemical chains" and "Hydrolysis".
+    \item Developed interfaces for chemistry supervisors (including multiple Unity3D interface
+        extensions and a no-code levels constructor being
+        an Unreal Engine Blueprints analog) which reduced the time spent on  levels creation
+        by about seven times.
+    \item Supervised an intern working on a journal of observations backend.
+\end{itemize}
+
+\header{Teaching experience}
+
+\textbf{Student teacher, Curriculum designer}, Higher School of Economics 
+\hfill Sep 2021 - Dec 2021 \\
+
+\begin{itemize}
+    \item Participated in the development of a new \CC\ curriculum for second-grade students
+        that would prepare them for third-grade subjects and deepen their \CC\ knowledge.
+        Prepared original assessments and held seminars.
+    \item The course received \href{https://www.hse.ru/en/edu/courses/470902539}
+        {"Best course for career development" and "Best course for new knowledge and skills"}
+        awards.
+\end{itemize}
+
+\textbf{Calculus teaching assistant},
+Higher School of Economics 
+\hfill Sep 2018 - June 2020 \\
+
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Mentored three groups of 25 students (first and second grade), raising student engagement
+        in calculus; held consultations, checked assessments.
+\end{itemize}
+
+\header{Education}
+
+\textbf{National Research University Higher School of Economics}, Moscow, Russia\\
+Bachelor of Computer Science in Distributed Systems.
+
+\textbf{Yandex School of Data Analysis}, Moscow, Russia\\
+Discrete optimisation course, OS architecture course, Rust course, Concurrency course.
+
+\header{Skills}
+\begin{tabular}{@{} l l }
+    Programming languages: & \CC \ (proficient); Python, Rust, Golang, Haskell, Lua (intermediate);
+    OCaml, Scala (basic)\\
+    Infrastructure: & Docker, Kubernetes (intermediate); Clang/LLVM (intermediate); \\
+    Languages: & Russian (native), English (working proficiency).\\
+\end{tabular}
+\end{document}
